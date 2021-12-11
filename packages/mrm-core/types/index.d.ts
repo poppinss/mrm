@@ -165,4 +165,9 @@ declare module 'mrm-core' {
 
 	// Special files
 	function packageJson(defaultValue?: object): PackageJson;
+	function defineLogger(logger: {
+		info?: (message: string) => void,
+		added?: (message: string) => void,
+		removed?: (message: string) => void
+	}): void
 }

@@ -11,7 +11,23 @@ const lines = require('./formats/lines');
 const markdown = require('./formats/markdown');
 const template = require('./formats/template');
 const yaml = require('./formats/yaml');
+const log = require('./util/log');
 const packageJson = require('./files/packageJson');
+
+/**
+ * Define a custom logger to be used by all the utilities
+ * and files
+ */
+function defineLogger(logger) {
+	Object.keys(logger).forEach(key => {
+		if (
+			['info', 'added', 'removed'].includes(key) &&
+			typeof logger[key] === 'function'
+		) {
+			log[key] = logger[key];
+		}
+	});
+}
 
 module.exports = {
 	readFile: fs.readFile,
@@ -36,4 +52,5 @@ module.exports = {
 	template,
 	yaml,
 	packageJson,
+	defineLogger,
 };

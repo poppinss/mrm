@@ -3,6 +3,7 @@ const index = require('../index');
 it('should contain all API functions', () => {
 	expect(index).toEqual(
 		expect.objectContaining({
+			defineLogger: expect.any(Function),
 			readFile: expect.any(Function),
 			updateFile: expect.any(Function),
 			copyFiles: expect.any(Function),
