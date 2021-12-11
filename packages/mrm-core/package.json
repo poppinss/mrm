@@ -1,13 +1,11 @@
 {
-  "name": "mrm-core",
-  "version": "6.1.7",
+  "name": "@poppinss/mrm-core",
+  "version": "1.0.0",
   "description": "Utilities to make tasks for Mrm",
-  "author": {
-    "name": "Artem Sapegin",
-    "url": "https://sapegin.me"
+  "author": "poppinss,virk",
+  "people": {
+    "name": "Artem Sapegin (https://sapegin.me)"
   },
-  "homepage": "https://github.com/sapegin/mrm",
-  "repository": "sapegin/mrm",
   "license": "MIT",
   "main": "src/index.js",
   "types": "types/index.d.ts",
